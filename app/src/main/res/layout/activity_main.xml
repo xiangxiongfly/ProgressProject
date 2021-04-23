@@ -14,14 +14,16 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="start"
-            android:text="开始" />
+            android:text="动画开始" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:onClick="progress"
             android:text="指定进度" />
     </LinearLayout>
