@@ -114,11 +114,11 @@ public class CircleProgress extends View {
     protected void onDraw(Canvas canvas) {
         float cx = getWidth() / 2F;
         float cy = getHeight() / 2F;
-        float radius = (getWidth() - progressWidth * 2) / 2F;
+        float radius = getWidth() / 2 - progressWidth / 2;
         canvas.drawCircle(cx, cy, radius, mBgPaint);
 
         float sweepAngle = 360 / 100F * progress;
-        rectF = new RectF(progressWidth, progressWidth, getWidth() - progressWidth, getHeight() - progressWidth);
+        rectF = new RectF(progressWidth / 2, progressWidth / 2, getWidth() - progressWidth / 2, getHeight() - progressWidth / 2);
         canvas.drawArc(rectF, startAngle, sweepAngle, false, mProgressPaint);
 
         if (isVisibleText && circleText != null) {
